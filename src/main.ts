@@ -1,20 +1,26 @@
 import './style.css';
 
 function init() {
-  const app = document.querySelector('#app');
+  const app = document.querySelector('#app')
 
   if (!app)
-    return;
+    return
   
-  app.innerHTML = `
-    <div>
-      <h1>Hello Vite!</h1>
-      
-      <div class="text-subtle">
-        Let's get back to the basics
-      </div>
-    </div>
-  `;  
+  const header = document.createElement('h1')
+
+  const headerText = document.createTextNode(`🚀 Learning at speed`)
+
+  header.appendChild(headerText)
+
+  const description = document.createElement('div')
+  description.className = 'text-subtle'
+
+  const desciptionText = document.createTextNode('Let\'s get back to the basics')
+
+  description.appendChild(desciptionText)
+
+  app.appendChild(header)
+  app.appendChild(description)
 }
 
 init()
